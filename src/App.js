@@ -10,6 +10,7 @@ class App extends Component {
         <button onClick={this.props.ageUp}>AGE UP!</button> &nbsp;
         <button onClick={this.props.ageDown}>AGE DOWN!</button><br />
         <p>
+          {this.props.history.length > 0 && <span>Another conditional programming example. The button was clicked now!</span>}
           <span style={{ display: this.props.history && this.props.history.length > 0 ? "block" : "none" }}>The previous values were..</span>
           {this.props.history.map((elem,index) => {
             console.log("elem...", elem);
